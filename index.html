@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Portfolio</title>
+</head>
+<body>
+ <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="left">
+        <a href="/">Shameer Ali Khan</a>
+    </div>
+    <div class="right">
+        <a href="http://linkedin.com" target="_blank" rel="noopenernoreferrer"><i class="fa-brands fa-square-linkedin"></i>
+        <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:shameer345alikhan@gmail.com"><i class="fa-solid fa-at"></i></i>
+        <span>Email</span>
+        </a>
+    </div>
+
+
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+     <section class="hero-section">
+        <div class="text">
+            <h2>Hi, I'm Shameer!</h2>
+            <p>Driven by a passion for data-informed design, I specialize in transforming complex datasets into actionable insights. My portfolio highlights advanced analytical projects, including a comprehensive Netflix dashboard and a sophisticated capstone analysis. I leverage technical proficiency to bridge the gap between robust data processing and intuitive, user-centric web interfaces.</p>
+
+            <div class="links">
+                <a href="#skills">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Skills</span>
+                </a>
+
+                <a href="#projects">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+                </a>
+
+                <a href="#contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+        <div class="headshot">
+            <img src="IMG_0848.webp" alt="Shameer Ali Khan Headshot">
+        </div>
+     </section>
+
+    <!-- SKILLS SECTION -->
+     <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+            <div class="text">
+                My technical expertise is anchored in data analytics and strategic problem-solving. I am proficient in SQL for database management and Power BI for interactive storytelling. Furthermore, I specialize in architecting clear business processes and data structures using industry-standard flowchart methodologies, including UML, BPMN, and ERDs, to bridge the gap between complex requirements and functional design.
+            </div>
+
+            <div class="cells">
+                <div class="cell">
+                    <img src="icons8-sql-48.png" alt="SQL Icon">
+                    <span>SQL</span>
+                </div>
+
+                 <div class="cell">
+                    <img src="icons8-power-bi-2021-48.png" alt="Power BI Icon">
+                    <span>Power BI</span>
+                </div>
+
+                 <div class="cell">
+                    <img src="icons8-excel-48.png" alt="Excel Icon">
+                    <span>Excel</span>
+                </div>
+            </div>
+     </section>
+
+    <!-- PROJECTS SECTION -->
+     <section id="projects" class="projects-section">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="netflix dashboard.png" alt="Netflix Data Dashboard">
+            </div>
+            <div class="project-info">
+                <h3>Netflix Content Strategy Dashboard</h3>
+                <p>An end-to-end Power BI analysis of Netflix’s global library. I used SQL for data cleaning and created interactive KPIs to visualize content trends and regional growth opportunities.</p>
+                <div class="tags">
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>ETL</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="Medical translation pipeline.png" alt="Medical Translation Capstone">
+            </div>
+            <div class="project-info">
+                <h3>Medical Translation Pipeline</h3>
+                <p>My university capstone project: a full-stack secure portal for medical translation. Features an automated database workflow and a Python-powered engine for high-accuracy results.</p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Streamlit</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-image">
+                <img src="US SuperStore Dashboard.png" alt="US SuperStore Dashboard">
+            </div>
+            <div class="project-info">
+                <h3>US SuperStore Dashboard</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente accusantium nemo asperiores sint atque, explicabo iusto vitae! Laudantium nisi maxime sed amet sunt, nulla modi neque dignissimos similique molestias optio!</p>
+                <div class="tags">
+                    <span>SQL</span>
+                    <span>Market Analysis</span>
+                    <span>Power Bi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CONTACT SECTION -->
+     <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+          I'm always open to discussing new opportunities, data-driven collaborations, or strategic consulting projects. Whether you have a question about my Netflix analysis, want to talk about flowchart methodologies, or just want to connect, feel free to reach out via the links below—I look forward to hearing from you!
+        </div>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+
+          <button type="submit">Send Message</button>
+  </main>
+</body>
+</html>
