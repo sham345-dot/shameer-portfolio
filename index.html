@@ -36,7 +36,7 @@
 
   <main>
     <!-- HERO SECTION -->
-     <section class="hero-section">
+     <section class="hero-section reveal">
         <div class="text">
             <h2>Hi, I'm Shameer!</h2>
             <p>Driven by a passion for data-informed design, I specialize in transforming complex datasets into actionable insights. My portfolio highlights advanced analytical projects, including a comprehensive Netflix dashboard and a sophisticated capstone analysis. I leverage technical proficiency to bridge the gap between robust data processing and intuitive, user-centric web interfaces.</p>
@@ -64,7 +64,7 @@
      </section>
 
     <!-- SKILLS SECTION -->
-     <section id="skills" class="skills-section">
+     <section id="skills" class="skills-section reveal">
         <h2>Skills</h2>
             <div class="text">
                 My technical expertise is anchored in data analytics and strategic problem-solving. I am proficient in SQL for database management and Power BI for interactive storytelling. Furthermore, I specialize in architecting clear business processes and data structures using industry-standard flowchart methodologies, including UML, BPMN, and ERDs, to bridge the gap between complex requirements and functional design.
@@ -89,7 +89,7 @@
      </section>
 
     <!-- PROJECTS SECTION -->
-     <section id="projects" class="projects-section">
+     <section id="projects" class="projects-section reveal">
     <h2>Featured Projects</h2>
     <div class="project-grid">
         <div class="project-card">
@@ -140,7 +140,7 @@
 </section>
 
     <!-- CONTACT SECTION -->
-     <section id="contact" class="contact-section">
+     <section id="contact" class="contact-section reveal">
       <h2>Contact</h2>
 
       <div class="group">
@@ -162,5 +162,80 @@
         </form>
       </div>
   </main>
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modalBody">
+            </div>
+    </div>
+</div>
+<script>
+    const modal = document.getElementById("projectModal");
+    const modalBody = document.getElementById("modalBody");
+    const closeBtn = document.querySelector(".close-modal");
+
+   const projectDetails = {
+    "Netflix Content Strategy Dashboard": `
+        <h2>Netflix Content Strategy Dashboard</h2>
+        <img src="netflix dashboard.png" class="modal-detail-img">
+        <h3>The Technical Challenge</h3>
+        <p>Analyzing 8,000+ titles to find regional gaps. I used <b>SQL Joins</b> to combine library data with global viewership metrics.</p>
+        <h3>Key Insights</h3>
+        <ul>
+            <li>Identified that International Movies and Dramas now dominate the catalog, marking a clear shift from Western-centric content to a "Global-Local" acquisition strategy.</li>
+            <li>Optimized data refresh rates using Power BI Gateway.</li>
+        </ul>
+    `,
+    "Medical Translation Pipeline": `
+        <h2>Medical Translation Pipeline</h2>
+        <img src="Medical translation pipeline.png" class="modal-detail-img">
+        <h3>The Process</h3>
+        <p>This project involved designing a <b>BPMN flowchart</b> to map the journey from patient input to physician review. I engineered the backend using Python and SQL to ensure secure data handling.</p>
+        <h3>Strategic Impact</h3>
+        <p>Automated the status tracking of translations, reducing manual physician oversight by 30% during the prototype phase.</p>
+    `,
+    "US SuperStore Dashboard": `
+        <h2>US SuperStore Performance Audit</h2>
+        <img src="US SuperStore Dashboard.png" class="modal-detail-img">
+        <h3>Business Impact</h3>
+        <p>Conducted a profitability analysis for a retail giant. I utilized <b>DAX</b> to calculate year-over-year growth and profit margins per sub-category.</p>
+        <h3>Strategic Insights</h3>
+        <ul>
+            <li>Profitability Audit:</b> Identified that salesperson Kelly Williams maintains high sales volume but the lowest net profit margin, suggesting a need for discount-threshold enforcement.</li>
+            <li><b>Seasonal Logistics:</b> Data shows a significant sales spike in Q4 (Nov-Dec); recommended optimizing Standard Class shipping contracts to handle 60% of total sales volume during peak demand.</li>
+        </ul>
+
+    `
+};
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.querySelector('h3').innerText;
+            modalBody.innerHTML = projectDetails[title] || "Details coming soon...";
+            modal.style.display = "block";
+        });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; };
+    function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150; // How many pixels in before it reveals
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
+// Run once on load in case some sections are already in view
+reveal();
+</script>
+
+
+
 </body>
 </html>
