@@ -185,6 +185,29 @@ nav .right a span {
     cursor: default;
 }
 
+/* 1. Ensure all cells are the exact same size */
+.skills-section .cells .cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left of the cell */
+    gap: 12px;
+    padding: 10px 20px;
+    
+    width: 200px;         /* Set a fixed width for all skill boxes */
+    height: 60px;        /* Set a fixed height for consistency */
+    
+    border: 1.5px solid #09090a; 
+    border-radius: 12px; 
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* 2. Force the images to stay small */
+.skills-section .cells .cell img {
+    width: 35px;         /* This forces the PowerPoint logo to shrink */
+    height: 35px;
+    object-fit: contain; /* Prevents the logo from stretching or squishing */
+}
+
 .skills-section .cells .cell:hover {
     background: #09090a;
     color: #fff;
